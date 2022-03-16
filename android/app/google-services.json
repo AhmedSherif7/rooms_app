@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1020138986467",
+    "project_id": "room-app-b732f",
+    "storage_bucket": "room-app-b732f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020138986467:android:3f8b984fd14fe1af7fded6",
+        "android_client_info": {
+          "package_name": "com.example.room_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020138986467-nchj275k22094fl1md3cgl4l6inqrldu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.room_app",
+            "certificate_hash": "7c7e4b6436a71db68a6c3ee1abf25a35b32eacf1"
+          }
+        },
+        {
+          "client_id": "1020138986467-gebpt6mnvm5nm70nlnn88kepukb44ss1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAivrSMhZ0ipAVSlLeeoTVsqENVbyLtg94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020138986467-gebpt6mnvm5nm70nlnn88kepukb44ss1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
