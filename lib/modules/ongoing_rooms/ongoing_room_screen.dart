@@ -154,7 +154,7 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
         AppCubit.get(context).endRoom(roomId);
         Navigator.pop(context);
       },
-      cancelHandler: () => Navigator.pop(context),
+      cancelHandler: () {},
       state: States.error,
     );
   }
@@ -172,7 +172,7 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
           appBar: AppBar(
             leading: IconButton(
               onPressed: () async {
-                if (widget.room.createdBy == Constants.phone) {
+                if (widget.room.createdBy!['phone'] == Constants.phone) {
                   showHostLeaveRoomConfirmDialog(widget.room.id!);
                 } else {
                   if (_isSpeaker) {
@@ -206,7 +206,7 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
               },
             ),
             actions: [
-              if (widget.room.createdBy == Constants.phone)
+              if (widget.room.createdBy!['phone'] == Constants.phone)
                 IconButton(
                   onPressed: () {
                     showConfirmDialog(
@@ -216,7 +216,7 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
                       headerIcon: Icons.warning,
                       confirmHandler: () =>
                           AppCubit.get(context).endRoom(widget.room.id!),
-                      cancelHandler: () => Navigator.pop(context),
+                      cancelHandler: () {},
                       state: States.error,
                     );
                   },
@@ -232,7 +232,7 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
           ),
           body: WillPopScope(
             onWillPop: () async {
-              if (widget.room.createdBy == Constants.phone) {
+              if (widget.room.createdBy!['phone'] == Constants.phone) {
                 showHostLeaveRoomConfirmDialog(widget.room.id!);
               } else {
                 if (_isSpeaker) {
@@ -349,14 +349,14 @@ class _OnGoingRoomScreenState extends State<OnGoingRoomScreen> {
           ),
           bottomSheet: RoomBottomSheet(
             ConditionalBuilder(
-              condition: Constants.phone == widget.room.createdBy || _isSpeaker,
+              condition: Constants.phone == widget.room.createdBy!['phone'] || _isSpeaker,
               builder: (context) {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton.icon(
                       onPressed: () {
-                        if (widget.room.createdBy == Constants.phone) {
+                        if (widget.room.createdBy!['phone'] == Constants.phone) {
                           showHostLeaveRoomConfirmDialog(widget.room.id!);
                         } else {
                           AppCubit.get(context).removeSpeaker(widget.room);

@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 import 'package:room_app/modules/room/room_screen.dart';
 
 import '../../models/room_model.dart';
-import '../../models/user_model.dart';
 import '../../shared/constants.dart';
 import '../../shared/helper_functions.dart';
 import '../../shared/resources/values_manager.dart';
@@ -17,24 +16,24 @@ class FinishedRooms extends StatefulWidget {
 }
 
 class _FinishedRoomsState extends State<FinishedRooms> {
-  String createdByName = '';
+  // String createdByName = '';
 
   @override
-  void initState() {
-    getCreatedByName();
-    super.initState();
-  }
+  // void initState() {
+  //   getCreatedByName();
+  //   super.initState();
+  // }
 
-  Future<void> getCreatedByName() async {
-    var res = await FirebaseFirestore.instance
-        .collection('users')
-        .where('phone', isEqualTo: Constants.phone)
-        .get();
-    var user = UserModel.fromJson(res.docs.first.data());
-    setState(() {
-      createdByName = user.name!;
-    });
-  }
+  // Future<void> getCreatedByName() async {
+  //   var res = await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .where('phone', isEqualTo: Constants.phone)
+  //       .get();
+  //   var user = UserModel.fromJson(res.docs.first.data());
+  //   setState(() {
+  //     createdByName = user.name!;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +170,7 @@ class _FinishedRoomsState extends State<FinishedRooms> {
                                       width: AppSize.s20,
                                     ),
                                     Text(
-                                      '$createdByName ${room.createdBy == Constants.phone ? '(Me)' : ''}',
+                                      '${room.createdBy!['name']} ${room.createdBy!['phone'] == Constants.phone ? '(Me)' : ''}',
                                       style:
                                           Theme.of(context).textTheme.bodyText2,
                                     ),

@@ -42,7 +42,7 @@ class FinishedRoomScreen extends StatelessWidget {
             centerTitle: true,
             title: Text(getFormattedDuration(duration)),
             actions: [
-              if (room.createdBy == Constants.phone)
+              if (room.createdBy!['phone'] == Constants.phone)
                 IconButton(
                   onPressed: () {
                     AppCubit.get(context).deleteRoom(room.id!);

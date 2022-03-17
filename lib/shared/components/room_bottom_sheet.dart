@@ -15,14 +15,11 @@ class RoomBottomSheet extends StatelessWidget {
       color: AppCubit.get(context).isDarkMode
           ? ColorManager.darkGrey
           : ColorManager.white,
-      height: AppSize.s80,
+      height: AppSize.s100,
       width: AppSize.deviceWidth,
       padding: const EdgeInsets.symmetric(
         horizontal: AppPadding.p20,
-        vertical: AppPadding.p12,
-      ),
-      margin: const EdgeInsets.only(
-        bottom: AppMargin.m12,
+        vertical: AppPadding.p20,
       ),
       child: child,
     );

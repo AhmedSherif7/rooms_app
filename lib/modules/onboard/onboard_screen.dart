@@ -61,13 +61,6 @@ class OnBoardingScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Light',
-                        style: Theme.of(context).textTheme.bodyText1,
-                      ),
-                      const SizedBox(
-                        width: AppSize.s6,
-                      ),
                       CustomSwitch(
                         enabledText: 'Dark',
                         disabledText: 'Light',
@@ -77,13 +70,6 @@ class OnBoardingScreen extends StatelessWidget {
                         inActiveColor: ColorManager.darkGrey,
                         value: AppCubit.get(context).isDarkMode,
                         onToggle: AppCubit.get(context).toggleThemeMode,
-                      ),
-                      const SizedBox(
-                        width: AppSize.s6,
-                      ),
-                      Text(
-                        'Dark',
-                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),

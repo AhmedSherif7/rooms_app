@@ -125,7 +125,7 @@ class _UpcomingRoomScreenState extends State<UpcomingRoomScreen> {
                       cubit.setNotification(
                         widget.room.id!,
                         widget.room,
-                        Constants.phone == widget.room.createdBy,
+                        Constants.phone == widget.room.createdBy!['phone'],
                       );
                     }
                   }
@@ -191,7 +191,7 @@ class _UpcomingRoomScreenState extends State<UpcomingRoomScreen> {
           ),
           bottomSheet: RoomBottomSheet(
             ConditionalBuilder(
-              condition: Constants.phone == widget.room.createdBy,
+              condition: Constants.phone == widget.room.createdBy!['phone'],
               builder: (context) {
                 return ElevatedButton.icon(
                   onPressed: () {
@@ -207,7 +207,7 @@ class _UpcomingRoomScreenState extends State<UpcomingRoomScreen> {
                         confirmHandler: () {
                           cubit.startRoom(widget.room.id!);
                         },
-                        cancelHandler: () => Navigator.pop(context),
+                        cancelHandler: () {},
                         state: States.warning,
                       );
                     } else {
@@ -240,7 +240,7 @@ class _UpcomingRoomScreenState extends State<UpcomingRoomScreen> {
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1!
-                          .copyWith(color: ColorManager.error),
+                          .copyWith(color: ColorManager.success),
                     ),
                   ],
                 );

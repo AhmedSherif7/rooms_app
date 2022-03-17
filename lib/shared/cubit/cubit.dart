@@ -84,7 +84,6 @@ class AppCubit extends Cubit<AppStates> {
             'phone': phone,
           });
           emit(AppInviteSpeakerSuccessState());
-          print(invitedSpeakers);
         } else {
           emit(AppSpeakerAlreadyInvitedState());
         }
@@ -105,8 +104,6 @@ class AppCubit extends Cubit<AppStates> {
     DateTime dateTime,
     bool type,
   ) {
-    print(Constants.name);
-    print(Constants.phone);
     invitedSpeakers.add({
       'name': Constants.name!,
       'phone': Constants.phone!,
@@ -115,7 +112,10 @@ class AppCubit extends Cubit<AppStates> {
     RoomModel room = RoomModel(
       title: title[0].toUpperCase() + title.substring(1),
       category: category[0].toUpperCase() + category.substring(1),
-      createdBy: Constants.phone,
+      createdBy: {
+        'name': Constants.name,
+        'phone': Constants.phone,
+      },
       speakers: [],
       invitedSpeakers: invitedSpeakers,
       audience: [],

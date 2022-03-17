@@ -4,7 +4,7 @@ class RoomModel {
   final String? id;
   final String? title;
   final String? category;
-  final String? createdBy;
+  final Map<String, dynamic>? createdBy;
   final Timestamp? createdOn;
   final List<dynamic>? speakers;
   final List<dynamic>? invitedSpeakers;
@@ -36,7 +36,7 @@ class RoomModel {
       id: json['id'] as String?,
       title: json['title'] as String?,
       category: json['category'] as String?,
-      createdBy: json['createdBy'] as String?,
+      createdBy: json['createdBy'] as Map<String, dynamic>?,
       createdOn: json['createdOn'] as Timestamp?,
       speakers: json['speakers'] as List<dynamic>?,
       invitedSpeakers: json['invitedSpeakers'] as List<dynamic>?,
