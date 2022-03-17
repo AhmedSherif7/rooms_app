@@ -16,25 +16,6 @@ class FinishedRooms extends StatefulWidget {
 }
 
 class _FinishedRoomsState extends State<FinishedRooms> {
-  // String createdByName = '';
-
-  @override
-  // void initState() {
-  //   getCreatedByName();
-  //   super.initState();
-  // }
-
-  // Future<void> getCreatedByName() async {
-  //   var res = await FirebaseFirestore.instance
-  //       .collection('users')
-  //       .where('phone', isEqualTo: Constants.phone)
-  //       .get();
-  //   var user = UserModel.fromJson(res.docs.first.data());
-  //   setState(() {
-  //     createdByName = user.name!;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
