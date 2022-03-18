@@ -9,9 +9,9 @@ Also you will get a notification before rooms start.
 
 used packages:  
 &emsp;- bloc state management  
-&emsp;- firebase core 
-&emsp;- firebase auth 
-&emsp;- cloud firestore 
+&emsp;- firebase core  
+&emsp;- firebase auth  
+&emsp;- cloud firestore  
 &emsp;- agora rtc engine for live broadcasting  
 &emsp;- flutter local notifications  
 &emsp;- flutter native timezone  
