@@ -1,16 +1,27 @@
-# room_app
+# Rooms App
 
-A new Flutter project.
+Live broadcasting app, every user can login with his phone number.
 
-## Getting Started
+And start creating private or public rooms, invite speakers to join him,
+then start live broadcasting.
 
-This project is a starting point for a Flutter application.
+Also you will get a notification before rooms start.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+used packages:  
+&emsp;- bloc state management  
+&emsp;- firebase core 
+&emsp;- firebase auth 
+&emsp;- cloud firestore 
+&emsp;- agora rtc engine for live broadcasting  
+&emsp;- flutter local notifications  
+&emsp;- flutter native timezone  
+&emsp;- flutter contacts  
+&emsp;- shared preferences  
+&emsp;- flutter switch  
+&emsp;- intl  
+&emsp;- fluttertoast  
+&emsp;- permission handler  
+&emsp;- conditional builder  
+&emsp;- country code picker  
+&emsp;- stop watch timer  
+&emsp;- awesome dialog  
